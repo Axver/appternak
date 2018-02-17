@@ -25,7 +25,7 @@ include "proses/pr_getdata.php";
   #mapid { height: 600px; }
 </style>
 
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>Data Peternakan</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -69,262 +69,11 @@ include "proses/pr_getdata.php";
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Ternak</b>GIS</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- start message -->
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <li class="dropdown tasks-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Create a nice theme
-                        <small class="pull-right">40%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">40% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Some task I need to do
-                        <small class="pull-right">60%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Make beautiful transitions
-                        <small class="pull-right">80%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">80% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
-        </ul>
-      </div>
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
@@ -332,25 +81,7 @@ include "proses/pr_getdata.php";
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
+
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -363,7 +94,7 @@ include "proses/pr_getdata.php";
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Menu Satu</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Menu Satu</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Menu Dua</a></li>
           </ul>
         </li>
@@ -372,6 +103,52 @@ include "proses/pr_getdata.php";
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Pilih Lokasi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
+            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
+            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
+            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
+          </ul>
+        </li>
+
+
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Suhu</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
+            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
+            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
+            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
+          </ul>
+        </li>
+
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Kelembapan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
+            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
+            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
+            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
+          </ul>
+        </li>
+
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>THI</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -431,9 +208,38 @@ include "proses/pr_getdata.php";
         </section>
 
         <section class="col-lg-4">
+          <div id="chartpertama">
+
+            <script src="plugin_chart/canvasjs.min.js"></script>
+
+            <div id="chartContainer" style="height: 200px; max-width: 300px; margin: 0px auto;"></div>
+            <br>
+            <div id="chartContainer1" style="padang-top:20px; height: 200px; max-width: 300px; margin: 0px auto;"></div>
+
+
+          </div>
 
         </section>
       </div>
+
+
+       <div class="panel panel-nfo">
+
+         <div class="panel-head">
+           <h2>Data Diagram</h2>
+
+         </div>
+
+         <div class="panel-body">
+          <div id="chartContainerAll" style="margin-left:-100px;height: 300px; max-width: 800px; margin: 0px auto;"></div>
+          <div id="chartContainerAll1" style="margin-left:-100px;height: 300px; max-width: 800px; margin: 0px auto;"></div>
+         </div>
+
+       </div>
+
+
+
+
       <!-- /.row (main row) -->
 
     </section>
@@ -456,186 +262,7 @@ include "proses/pr_getdata.php";
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -725,9 +352,416 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli3.setStyle({fillColor: '#ff00e1'});
         poli3.setStyle({fillOpacity: 8});
         poli3.setStyle({color: '#ff0000'});
-              poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+              poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
 
       }
+}
+// Menampilkan data diagram masing-masing daerah yang didigitasi
+
+
+function chartall()
+{
+
+  	var chart = new CanvasJS.Chart("chartContainerAll", {
+  	title:{
+  		text: "Data Populasi Sapi Potong 2005-2014"
+  	},
+  	axisY:[{
+  		title: "Populasi (Ekor)",
+  		lineColor: "#C24642",
+  		tickColor: "#C24642",
+  		labelFontColor: "#C24642",
+  		titleFontColor: "#C24642",
+  		suffix: "k"
+  	},
+  	{
+
+  	}],
+  	axisY2: {
+
+  	},
+  	toolTip: {
+  		shared: true
+  	},
+  	legend: {
+  		cursor: "pointer",
+  		itemclick: toggleDataSeries
+  	},
+  	data: [{
+  		type: "line",
+  		name: "Padang",
+  		color: "#369EAD",
+  		showInLegend: true,
+  		axisYIndex: 1,
+  		dataPoints: [
+  			{ x: 2005, y: 23.064 },
+  			{ x: 2006, y: 26.442 },
+  			{ x: 2007, y: 26.574 },
+  			{ x: 2008, y: 27.966 },
+  			{ x: 2009, y: 29.338 },
+  			{ x: 2010, y: 29.643 },
+  			{ x: 2011, y: 14.002 },
+  			{ x: 2012, y: 14.994 },
+  			{ x: 2013, y: 19.902 },
+  			{ x: 2014, y: 20.300 }
+  		]
+  	},
+  	{
+  		type: "line",
+  		name: "Pesisir Selatan",
+  		color: "#C24642",
+  		axisYIndex: 0,
+  		showInLegend: true,
+  		dataPoints: [
+  			{ x: 2005, y: 79.422 },
+  			{ x: 2006, y: 82.396 },
+  			{ x: 2007, y: 84.198 },
+  			{ x: 2008, y: 89.995 },
+  			{ x: 2009, y: 91.778 },
+  			{ x: 2010, y: 94.218 },
+  			{ x: 2011, y: 77.383 },
+  			{ x: 2012, y: 78.998 },
+  			{ x: 2013, y: 79.266 },
+  			{ x: 2014, y: 81.644 }
+
+  		]
+  	},
+  	{
+  		type: "line",
+  		name: "Lima Puluh Kota",
+  		color: "#7F6084",
+  		axisYType: "secondary",
+  		showInLegend: true,
+  		dataPoints: [
+  			{ x: 2005, y: 52.382 },
+  			{ x: 2006, y: 57.306 },
+  			{ x: 2007, y: 56.416 },
+  			{ x: 2008, y: 61.735 },
+  			{ x: 2009, y: 63.214 },
+  			{ x: 2010, y: 66.232 },
+  			{ x: 2011, y: 33.278 },
+  			{ x: 2012, y: 33.978 },
+  			{ x: 2013, y: 32.958 },
+  			{ x: 2014, y: 34.833 }
+
+  		]
+  	}]
+  });
+  chart.render();
+
+  function toggleDataSeries(e) {
+  	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+  		e.dataSeries.visible = false;
+  	} else {
+  		e.dataSeries.visible = true;
+  	}
+  	e.chart.render();
+  }
+
+
+  var chart1 = new CanvasJS.Chart("chartContainerAll1", {
+  title:{
+    text: "Data Pemotongan Sapi Potong 2005-2014"
+  },
+  axisY:[{
+    title: "Pemotongan (Ekor)",
+    lineColor: "#C24642",
+    tickColor: "#C24642",
+    labelFontColor: "#C24642",
+    titleFontColor: "#C24642",
+    suffix: "k"
+  },
+  {
+
+  }],
+  axisY2: {
+
+  },
+  toolTip: {
+    shared: true
+  },
+  legend: {
+    cursor: "pointer",
+    itemclick: toggleDataSeries
+  },
+  data: [{
+    type: "line",
+    name: "Padang",
+    color: "#369EAD",
+    showInLegend: true,
+    axisYIndex: 1,
+    dataPoints: [
+      { x: 2005, y: 14.971 },
+      { x: 2006, y: 4.888 },
+      { x: 2007, y: 19.469 },
+      { x: 2008, y: 21.220 },
+      { x: 2009, y: 21.986 },
+      { x: 2010, y: 18.203 },
+      { x: 2011, y: 14.567 },
+      { x: 2012, y: 15.765 },
+      { x: 2013, y: 18.902 },
+      { x: 2014, y: 19.493 }
+    ]
+  },
+  {
+    type: "line",
+    name: "Pesisir Selatan",
+    color: "#C24642",
+    axisYIndex: 0,
+    showInLegend: true,
+    dataPoints: [
+      { x: 2005, y: 6.073 },
+      { x: 2006, y: 16.688 },
+      { x: 2007, y: 6.256 },
+      { x: 2008, y: 7.946 },
+      { x: 2009, y: 6.476 },
+      { x: 2010, y: 6.635 },
+      { x: 2011, y: 5.532 },
+      { x: 2012, y: 5.993 },
+      { x: 2013, y: 6.945 },
+      { x: 2014, y: 7.160 }
+
+    ]
+  },
+  {
+    type: "line",
+    name: "Lima Puluh Kota",
+    color: "#7F6084",
+    axisYType: "secondary",
+    showInLegend: true,
+    dataPoints: [
+      { x: 2005, y: 3.663 },
+      { x: 2006, y: 11.019 },
+      { x: 2007, y: 4.137 },
+      { x: 2008, y: 4.655 },
+      { x: 2009, y: 4.270 },
+      { x: 2010, y: 5.750 },
+      { x: 2011, y: 4.255 },
+      { x: 2012, y: 4.761 },
+      { x: 2013, y: 4.816 },
+      { x: 2014, y: 4.960 }
+
+    ]
+  }]
+  });
+  chart1.render();
+
+  function toggleDataSeries(e) {
+  if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+    e.dataSeries.visible = false;
+  } else {
+    e.dataSeries.visible = true;
+  }
+  e.chart.render();
+  }
+
+
+}
+
+function chartpadang()
+{
+
+  var hapus= document.getElementById("chartContainerAll").value="";
+  var hapus1= document.getElementById("chartContainerAll1").value="";
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+  	animationEnabled: true,
+  	theme: "light2",
+  	title:{
+  		text: "Populasi Sapi Potong 2005-2014"
+  	},
+  	axisY:{
+  		includeZero: false
+  	},
+  	data: [{
+  		type: "line",
+  		dataPoints: [
+  			{ y: 23.064 },
+  			{ y: 26.442},
+  			{ y: 26.574 },
+  			{ y: 27.966 },
+  			{ y: 29.338 },
+  			{ y: 29.643 , indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+  			{ y: 14.002 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+  			{ y: 14.994 },
+  			{ y: 19.902 },
+  			{ y: 20.300 }
+  		]
+  	}]
+  });
+  chart.render();
+
+
+
+
+  var chart1 = new CanvasJS.Chart("chartContainer1", {
+  	animationEnabled: true,
+  	theme: "light2",
+  	title:{
+  		text: "Pemotongan Ternak Sapi Potong 2005-2014"
+  	},
+  	axisY:{
+  		includeZero: false
+  	},
+  	data: [{
+  		type: "line",
+  		dataPoints: [
+  			{ y: 14.971 },
+  			{ y: 4.888 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+  			{ y: 19.469 },
+  			{ y: 21.220 },
+  			{ y: 21.986 , indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+  			{ y: 18.203 },
+  			{ y: 14.567 },
+  			{ y: 15.765 },
+  			{ y: 18.902 },
+  			{ y: 19.493 }
+  		]
+  	}]
+  });
+  chart1.render();
+
+
+}
+
+function chartlimapuluh()
+{
+
+
+    var hapus= document.getElementById("chartContainerAll").value="";
+    var hapus1= document.getElementById("chartContainerAll1").value="";
+
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+    	animationEnabled: true,
+    	theme: "light2",
+    	title:{
+    		text: "Populasi Sapi Potong 2005-2014"
+    	},
+    	axisY:{
+    		includeZero: false
+    	},
+    	data: [{
+    		type: "line",
+    		dataPoints: [
+    			{ y: 52.382 },
+    			{ y: 57.306},
+    			{ y: 56.416 },
+    			{ y: 61.735 },
+    			{ y: 63.214 },
+    			{ y: 66.232, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+    			{ y: 33.278 },
+    			{ y: 33.978 },
+    			{ y: 32.958 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+    			{ y: 34.833 }
+    		]
+    	}]
+    });
+    chart.render();
+
+
+
+
+    var chart1 = new CanvasJS.Chart("chartContainer1", {
+    	animationEnabled: true,
+    	theme: "light2",
+    	title:{
+    		text: "Pemotongan Ternak Sapi Potong 2005-2014"
+    	},
+    	axisY:{
+    		includeZero: false
+    	},
+    	data: [{
+    		type: "line",
+    		dataPoints: [
+    			{ y: 3.663  , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+    			{ y: 11.019, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+    			{ y: 4.137 },
+    			{ y: 4.655 },
+    			{ y: 4.270 },
+    			{ y: 5.750 },
+    			{ y: 4.255 },
+    			{ y: 4.761 },
+    			{ y: 4.816 },
+    			{ y: 4.960 }
+    		]
+    	}]
+    });
+    chart1.render();
+
+
+
+}
+
+function chartpesisir()
+{
+
+
+
+    var hapus= document.getElementById("chartContainerAll").value="";
+    var hapus1= document.getElementById("chartContainerAll1").value="";
+
+
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+    	animationEnabled: true,
+    	theme: "light2",
+    	title:{
+    		text: "Populasi Sapi Potong 2005-2014"
+    	},
+    	axisY:{
+    		includeZero: false
+    	},
+    	data: [{
+    		type: "line",
+    		dataPoints: [
+    			{ y: 79.422 },
+    			{ y: 82.396},
+    			{ y: 84.198},
+    			{ y: 89.995 },
+    			{ y: 91.778 },
+    			{ y: 94.218 , indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+    			{ y: 77.383 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+    			{ y: 78.998 },
+    			{ y: 79.266 },
+    			{ y: 81.644 }
+    		]
+    	}]
+    });
+    chart.render();
+
+
+
+
+    var chart1 = new CanvasJS.Chart("chartContainer1", {
+    	animationEnabled: true,
+    	theme: "light2",
+    	title:{
+    		text: "Pemotongan Ternak Sapi Potong 2005-2014"
+    	},
+    	axisY:{
+    		includeZero: false
+    	},
+    	data: [{
+    		type: "line",
+    		dataPoints: [
+    			{ y: 6.073 },
+    			{ y: 16.688 , indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+    			{ y: 6.256 },
+    			{ y: 7.964 },
+    			{ y: 6.476 },
+    			{ y: 6.635 },
+    			{ y: 5.532 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+    			{ y: 5.993 },
+    			{ y: 6.945  },
+    			{ y: 7.160 }
+    		]
+    	}]
+    });
+    chart1.render();
+
+
+
 }
 
 function remove()
@@ -752,6 +786,7 @@ function padang()
 
 // Panggil Fungsi Remove terlebih Dahulu
 remove();
+chartpadang();
 // Tampilkan Wilayah Padang Saja
 for(var i = 0; i < argeojson.features.length; i++){
 if (argeojson.features[i].properties.nama_kab=='Padang' )
@@ -762,7 +797,7 @@ poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
 poli3.setStyle({fillColor: '#ff00e1'});
 poli3.setStyle({fillOpacity: 8});
 poli3.setStyle({color: '#ff0000'});
-      poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+      poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
 }
 
 }
@@ -774,6 +809,7 @@ poli3.setStyle({color: '#ff0000'});
 function pesisir()
 {
   remove();
+  chartpesisir();
   // Tampilkan wilayah PESISIR
   for(var i = 0; i < argeojson.features.length; i++){
   if (argeojson.features[i].properties.nama_kab=='Pesisir selatan' )
@@ -792,6 +828,7 @@ function pesisir()
 function limapuluh()
 {
   remove();
+  chartlimapuluh();
   for(var i = 0; i < argeojson.features.length; i++){
   if (argeojson.features[i].properties.nama_kab=='Lima Puluh Kota' )
   {
@@ -808,6 +845,7 @@ function limapuluh()
 
 function showall()
 {
+  chartall();
   remove();
 
   for(var i = 0; i < argeojson.features.length; i++){
@@ -837,12 +875,23 @@ function showall()
           poli3.setStyle({fillColor: '#ff00e1'});
           poli3.setStyle({fillOpacity: 8});
           poli3.setStyle({color: '#ff0000'});
-                poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+                poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
 
         }
   }
 
 }
+
+
+
+</script>
+
+
+<script>
+
+
+
+
 </script>
 </body>
 </html>
