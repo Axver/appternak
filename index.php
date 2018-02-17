@@ -368,6 +368,23 @@ include "proses/pr_getdata.php";
           </ul>
         </li>
 
+
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Pilih Lokasi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
+            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
+            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
+            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
+          </ul>
+        </li>
+
+
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -677,7 +694,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var argeojson = <?php echo json_encode($hasil) ?>;
 // L.geoJSON(argeojson).addTo(mymap);
 
-var poli;
+var poli1;
+var poli2;
+var poli3;
 console.log(argeojson);
 for(var i = 0; i < argeojson.features.length; i++){
 
@@ -685,32 +704,145 @@ for(var i = 0; i < argeojson.features.length; i++){
         {
 
         // console.log(argeojson.features[i].properties.gid);
-        poli=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
-        poli.setStyle({fillColor: '#000000'});
-        poli.setStyle({fillOpacity: 8});
-        poli.setStyle({color: '#ff0000'});
-        poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        poli1=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+        poli1.setStyle({fillColor: '#000000'});
+        poli1.setStyle({fillOpacity: 8});
+        poli1.setStyle({color: '#ff0000'});
+        poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
       }
       else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
       {
         // console.log(argeojson.features[i].properties.gid);
-        poli=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
-        poli.setStyle({fillColor: '#0000ff'});
-        poli.setStyle({fillOpacity: 8});
-        poli.setStyle({color: '#ff0000'});
-                poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        poli2=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+        poli2.setStyle({fillColor: '#0000ff'});
+        poli2.setStyle({fillOpacity: 8});
+        poli2.setStyle({color: '#ff0000'});
+                poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
       }
       else {
 
-        poli=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
-        poli.setStyle({fillColor: '#ff00e1'});
-        poli.setStyle({fillOpacity: 8});
-        poli.setStyle({color: '#ff0000'});
-              poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+        poli3.setStyle({fillColor: '#ff00e1'});
+        poli3.setStyle({fillOpacity: 8});
+        poli3.setStyle({color: '#ff0000'});
+              poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
 
       }
 }
 
+function remove()
+{
+
+    poli1.eachLayer(function (layer) {
+      poli1.removeLayer(layer);
+  });
+
+  poli2.eachLayer(function (layer) {
+    poli2.removeLayer(layer);
+  });
+
+  poli3.eachLayer(function (layer) {
+    poli3.removeLayer(layer);
+  });
+}
+
+
+function padang()
+{
+
+// Panggil Fungsi Remove terlebih Dahulu
+remove();
+// Tampilkan Wilayah Padang Saja
+for(var i = 0; i < argeojson.features.length; i++){
+if (argeojson.features[i].properties.nama_kab=='Padang' )
+{
+
+// console.log(argeojson.features[i].properties.gid);
+poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+poli3.setStyle({fillColor: '#ff00e1'});
+poli3.setStyle({fillOpacity: 8});
+poli3.setStyle({color: '#ff0000'});
+      poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+}
+
+}
+
+
+}
+
+
+function pesisir()
+{
+  remove();
+  // Tampilkan wilayah PESISIR
+  for(var i = 0; i < argeojson.features.length; i++){
+  if (argeojson.features[i].properties.nama_kab=='Pesisir selatan' )
+  {
+
+  poli1=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+  poli1.setStyle({fillColor: '#000000'});
+  poli1.setStyle({fillOpacity: 8});
+  poli1.setStyle({color: '#ff0000'});
+  poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+
+ }
+}
+}
+
+function limapuluh()
+{
+  remove();
+  for(var i = 0; i < argeojson.features.length; i++){
+  if (argeojson.features[i].properties.nama_kab=='Lima Puluh Kota' )
+  {
+
+    poli2=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+    poli2.setStyle({fillColor: '#0000ff'});
+    poli2.setStyle({fillOpacity: 8});
+    poli2.setStyle({color: '#ff0000'});
+            poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+
+ }
+}
+}
+
+function showall()
+{
+  remove();
+
+  for(var i = 0; i < argeojson.features.length; i++){
+
+          if (argeojson.features[i].properties.nama_kab=='Pesisir selatan' )
+          {
+
+          // console.log(argeojson.features[i].properties.gid);
+          poli1=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+          poli1.setStyle({fillColor: '#000000'});
+          poli1.setStyle({fillOpacity: 8});
+          poli1.setStyle({color: '#ff0000'});
+          poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        }
+        else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
+        {
+          // console.log(argeojson.features[i].properties.gid);
+          poli2=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+          poli2.setStyle({fillColor: '#0000ff'});
+          poli2.setStyle({fillOpacity: 8});
+          poli2.setStyle({color: '#ff0000'});
+                  poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        }
+        else {
+
+          poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
+          poli3.setStyle({fillColor: '#ff00e1'});
+          poli3.setStyle({fillOpacity: 8});
+          poli3.setStyle({color: '#ff0000'});
+                poli.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+
+        }
+  }
+
+}
 </script>
 </body>
 </html>
