@@ -290,7 +290,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli1.setStyle({fillColor: '#000000'});
         poli1.setStyle({fillOpacity: 8});
         poli1.setStyle({color: '#ff0000'});
-        poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
+        poli1.bindPopup("<h3><b>Info Lingkungan!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
       }
       else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
       {
@@ -299,7 +299,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli2.setStyle({fillColor: '#0000ff'});
         poli2.setStyle({fillOpacity: 8});
         poli2.setStyle({color: '#ff0000'});
-                poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/>");
+                poli2.bindPopup("<h3><b>Info Lingkungan!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/>");
       }
       else {
 
@@ -307,7 +307,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli3.setStyle({fillColor: '#ff00e1'});
         poli3.setStyle({fillOpacity: 8});
         poli3.setStyle({color: '#ff0000'});
-              poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/>");
+              poli3.bindPopup("<h3><b>Info Lingkungan!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/>");
 
       }
 }
@@ -752,7 +752,7 @@ poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
 poli3.setStyle({fillColor: '#ff00e1'});
 poli3.setStyle({fillOpacity: 8});
 poli3.setStyle({color: '#ff0000'});
-poli3.bindPopup("<h3><b>Info Ternak!</b></h3><b> PADANG</b> <br/><h4>Suhu (OC) Dt.Tinggi</h4><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table>");
+poli3.bindPopup("<h3><b>Info Lingkungan!</b></h3><b> PADANG</b> <br/><h4>Suhu (OC) Dt.Rendah</h4><table><th>Waktu (WIB)</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table><h4>THI DT Rendah</h4><table><th>Waktu (WIB)</th><th>THI</th><tr><td>7</td><td>72.6</td></tr><tr><td>10</td><td>80.3</td></tr><tr><td>13</td><td>82.3</td></tr><tr><td>16</td><td>81.6</td></tr><tr><td>19</td><td>79.4</td></tr></table>");
 
 }
 
@@ -775,7 +775,7 @@ function pesisir()
   poli1.setStyle({fillColor: '#000000'});
   poli1.setStyle({fillOpacity: 8});
   poli1.setStyle({color: '#ff0000'});
-  poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
+  poli1.bindPopup("<h3><b>Info Lingkungan!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
 
  }
 }
@@ -793,7 +793,7 @@ function limapuluh()
     poli2.setStyle({fillColor: '#0000ff'});
     poli2.setStyle({fillOpacity: 8});
     poli2.setStyle({color: '#ff0000'});
-    poli2.bindPopup("<h3><b>Info Ternak!</b></h3><b> LIMA PULUH KOTA</b> <br/><h4>Suhu (OC) Dt.Rendah</h4><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table>");
+    poli2.bindPopup("<h3><b>Info Lingkungan!</b></h3><b> LIMA PULUH KOTA</b><br/><h4>Suhu (OC) Dt.Tinggi</h4><table><th> Waktu(WIB)</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table><h4>THI Dt.Tinggi</h4><table><th> Waktu(WIB)</th><th>THI</th><tr><td>7</td><td>72.3</td></tr><tr><td>10</td><td>73.7</td></tr><tr><td>13</td><td>75.9</td></tr><tr><td>16</td><td>76.3</td></tr><tr><td>19</td><td>73.3</td></tr></table>");
 
 
  }
@@ -815,7 +815,7 @@ function showall()
           poli1.setStyle({fillColor: '#000000'});
           poli1.setStyle({fillOpacity: 8});
           poli1.setStyle({color: '#ff0000'});
-          poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
+          poli1.bindPopup("<h3><b>Info Lingkungan!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
         }
         else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
         {
@@ -824,7 +824,7 @@ function showall()
           poli2.setStyle({fillColor: '#0000ff'});
           poli2.setStyle({fillOpacity: 8});
           poli2.setStyle({color: '#ff0000'});
-                  poli2.bindPopup("<h3><b>Info Ternak!</b></h3><b> LIMA PULUH KOTA</b> <br/><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table>");
+                  poli2.bindPopup("<h3><b>Info Lingkungan!</b></h3><b> LIMA PULUH KOTA</b><br/><h4>Suhu (OC) Dt.Tinggi</h4><table><th> Waktu(WIB)</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table><h4>THI Dt.Tinggi</h4><table><th> Waktu(WIB)</th><th>THI</th><tr><td>7</td><td>72.3</td></tr><tr><td>10</td><td>73.7</td></tr><tr><td>13</td><td>75.9</td></tr><tr><td>16</td><td>76.3</td></tr><tr><td>19</td><td>73.3</td></tr></table>");
         }
         else {
 
@@ -832,7 +832,7 @@ function showall()
           poli3.setStyle({fillColor: '#ff00e1'});
           poli3.setStyle({fillOpacity: 8});
           poli3.setStyle({color: '#ff0000'});
-                poli3.bindPopup("<h3><b>Info Ternak!</b></h3><b> PADANG</b> <br/><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table>");
+                poli3.bindPopup("<h3><b>Info Lingkungan!</b></h3><b> PADANG</b> <br/><h4>Suhu (OC) Dt.Rendah</h4><table><th>Waktu (WIB)</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table><h4>THI DT Rendah</h4><table><th>Waktu (WIB)</th><th>THI</th><tr><td>7</td><td>72.6</td></tr><tr><td>10</td><td>80.3</td></tr><tr><td>13</td><td>82.3</td></tr><tr><td>16</td><td>81.6</td></tr><tr><td>19</td><td>79.4</td></tr></table>");
 
         }
   }
