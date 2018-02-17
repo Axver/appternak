@@ -116,51 +116,6 @@ include "proses/pr_getdata.php";
         </li>
 
 
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Suhu</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
-            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
-            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
-            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
-          </ul>
-        </li>
-
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Kelembapan</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
-            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
-            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
-            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
-          </ul>
-        </li>
-
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>THI</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a onclick="showall()" href="#"><i class="fa fa-circle-o"></i> Semua Lokasi</a></li>
-            <li><a onclick="padang()" href="#"><i class="fa fa-circle-o"></i> Padang</a></li>
-            <li><a onclick="pesisir()"href="#"><i class="fa fa-circle-o"></i> Pesisir Selatan</a></li>
-            <li><a onclick="limapuluh()" href="#"><i class="fa fa-circle-o"></i> Lima Puluh Kota</a></li>
-          </ul>
-        </li>
-
 
       </ul>
     </section>
@@ -335,7 +290,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli1.setStyle({fillColor: '#000000'});
         poli1.setStyle({fillOpacity: 8});
         poli1.setStyle({color: '#ff0000'});
-        poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+        poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
       }
       else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
       {
@@ -344,7 +299,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli2.setStyle({fillColor: '#0000ff'});
         poli2.setStyle({fillOpacity: 8});
         poli2.setStyle({color: '#ff0000'});
-                poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+                poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/>");
       }
       else {
 
@@ -352,7 +307,7 @@ for(var i = 0; i < argeojson.features.length; i++){
         poli3.setStyle({fillColor: '#ff00e1'});
         poli3.setStyle({fillOpacity: 8});
         poli3.setStyle({color: '#ff0000'});
-              poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+              poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/>");
 
       }
 }
@@ -797,7 +752,8 @@ poli3=L.geoJSON(argeojson.features[i].geometry).addTo(mymap);
 poli3.setStyle({fillColor: '#ff00e1'});
 poli3.setStyle({fillOpacity: 8});
 poli3.setStyle({color: '#ff0000'});
-      poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+poli3.bindPopup("<h3><b>Info Ternak!</b></h3><b> PADANG</b> <br/><h4>Suhu (OC) Dt.Tinggi</h4><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table>");
+
 }
 
 }
@@ -819,7 +775,7 @@ function pesisir()
   poli1.setStyle({fillColor: '#000000'});
   poli1.setStyle({fillOpacity: 8});
   poli1.setStyle({color: '#ff0000'});
-  poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+  poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
 
  }
 }
@@ -837,7 +793,8 @@ function limapuluh()
     poli2.setStyle({fillColor: '#0000ff'});
     poli2.setStyle({fillOpacity: 8});
     poli2.setStyle({color: '#ff0000'});
-            poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+    poli2.bindPopup("<h3><b>Info Ternak!</b></h3><b> LIMA PULUH KOTA</b> <br/><h4>Suhu (OC) Dt.Rendah</h4><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table>");
+
 
  }
 }
@@ -858,7 +815,7 @@ function showall()
           poli1.setStyle({fillColor: '#000000'});
           poli1.setStyle({fillOpacity: 8});
           poli1.setStyle({color: '#ff0000'});
-          poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+          poli1.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PESISIR SELATAN</b> <br/>");
         }
         else if(argeojson.features[i].properties.nama_kab=='Lima Puluh Kota')
         {
@@ -867,7 +824,7 @@ function showall()
           poli2.setStyle({fillColor: '#0000ff'});
           poli2.setStyle({fillOpacity: 8});
           poli2.setStyle({color: '#ff0000'});
-                  poli2.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> LIMA PULUH KOTA</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+                  poli2.bindPopup("<h3><b>Info Ternak!</b></h3><b> LIMA PULUH KOTA</b> <br/><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>23.8</td></tr><tr><td>10</td><td>25.0</td></tr><tr><td>13</td><td>26.8</td></tr><tr><td>16</td><td>27.1</td></tr><tr><td>19</td><td>24.4</td></tr></table>");
         }
         else {
 
@@ -875,7 +832,7 @@ function showall()
           poli3.setStyle({fillColor: '#ff00e1'});
           poli3.setStyle({fillOpacity: 8});
           poli3.setStyle({color: '#ff0000'});
-                poli3.bindPopup("<h3><b>Info Ternak!</b></h3><br>Disini Info Seputar Ternak<br/><b> PADANG</b> <br/><div class='box'><div class='box-header with-border'><h3 class='box-title'>Bordered Table</h3></div><div class='box-body'><table class='table table-bordered'><tr><th style='width: 10px'>#</th><th>Task</th><th>Progress</th><th style='width: 40px'>Label</th></tr><tr><td>1.</td><td>Update software</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-danger' style='width: 55%'></div></div></td><td><span class='badge bg-red'>55%</span></td></tr><tr><td>2.</td><td>Clean database</td><td><div class='progress progress-xs'><div class='progress-bar progress-bar-yellow' style='width: 70%'></div></div></td><td><span class='badge bg-yellow'>70%</span></td></tr><tr><td>3.</td><td>Cron job running</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-primary' style='width:30%'></div></div></td><td><span class='badge bg-light-blue'>30%</span></td></tr><tr><td>4.</td><td>Fix and squish bugs</td><td><div class='progress progress-xs progress-striped active'><div class='progress-bar progress-bar-success' style='width: 90%'></div></div></td><td><span class='badge bg-green'>90%</span></td></tr></table></div><div class='box-footer clearfix'><ul class='pagination pagination-sm no-margin pull-right'><li><a href='#'>&laquo;</a></li><li><a href='#'>1</a></li><li><a href='#'>2</a></li><li><a href='#'>3</a></li><li><a href='#'>&raquo;</a></li></ul></div></div>");
+                poli3.bindPopup("<h3><b>Info Ternak!</b></h3><b> PADANG</b> <br/><table><th>Waktu</th><th>Suhu</th><tr><td>7</td><td>26.6</td></tr><tr><td>10</td><td>29.8</td></tr><tr><td>13</td><td>32.3</td></tr><tr><td>16</td><td>31.7</td></tr><tr><td>19</td><td>29.4</td></tr></table>");
 
         }
   }
